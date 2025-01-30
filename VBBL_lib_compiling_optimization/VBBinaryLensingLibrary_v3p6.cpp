@@ -98,7 +98,7 @@ VBBinaryLensing::~VBBinaryLensing() {
 	}
 }
 
-/*
+
 //////////////////////////////
 //////////////////////////////
 ////////Critical curves and caustics
@@ -496,7 +496,7 @@ void VBBinaryLensing::ComputeParallax(double t, double t0, double *Et) {
 		}
 	}
 }
-*/
+
 //////////////////////////////
 //////////////////////////////
 ////////Basic magnification functions
@@ -1195,7 +1195,7 @@ double VBBinaryLensing::BinaryMagDark(double a, double q, double y1, double y2, 
     }
 	return Mag;
 }
-/*
+
 void VBBinaryLensing::BinaryMagMultiDark(double a, double q, double y1, double y2, double RSv, double *a1_list, int nfil, double *mag_list, double Tol) {
 	annulus *scan;
 	int imax = 0;
@@ -1232,7 +1232,7 @@ void VBBinaryLensing::BinaryMagMultiDark(double a, double q, double y1, double y
 
 	multidark = false;
 }
-*/
+
 double VBBinaryLensing::LDprofile(double r) {
 	static int ir;
 	static double rr,ret;
@@ -1363,7 +1363,7 @@ double VBBinaryLensing::rCLDprofile(double tc,annulus *left,annulus *right) {
 
 	return cb;
 }
-/*
+
 void VBBinaryLensing::SetLDprofile(double (*UserLDprofile)(double),int newnpLD) {
 	int ic,ir;
 	if (npLD > 0) {
@@ -2745,7 +2745,7 @@ double VBBinaryLensing::BinSourceBinLensPOX(double* pr, double t) {
 
 	return mags;
 }
-*/
+
 
 
 ///////////////////////////////////////////////
