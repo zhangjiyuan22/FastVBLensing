@@ -15,10 +15,10 @@ Rich comments to VBBL are added in VBBL_lib_algorithmic_compiling_optimization/
 7. export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:bin/
 8. cd bin
 9. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -1.0 -1.0 1
-    (which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening)
+    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening)
 10. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -0.1 -0.1 2
-    (which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.1, 0.1, 251), resulting file named as '2', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening)
+    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.1, 0.1, 251), resulting file named as '2', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening)
 11. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -0.01 -0.01 3
-    (which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.01, 0.01, 251), resulting file named as '3', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening)
-    (Purpose of running three times with different ranges: get enough points in low/medium/high magnification region, respectively)
+    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.01, 0.01, 251), resulting file named as '3', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening)
+    <br>(Purpose of running three times with different ranges: get enough points in low/medium/high magnification region, respectively)
    
