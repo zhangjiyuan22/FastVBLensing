@@ -16,7 +16,8 @@ Rich comments to VBBL are added in VBBL_lib_algorithmic_compiling_optimization/
 8. cd bin
 ### VBBL
 10. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -1.0 -1.0 1
-    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', <br>default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)
+    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', <br>default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)<br>
+    (actually, it's no strictly np.linspace(-1.0, 1.0, 251), the ending point is not included, but just use this notation)
 11. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -0.1 -0.1 2
     <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.1, 0.1, 251), resulting file named as '2', <br>default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)
 12. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -0.01 -0.01 3
@@ -38,6 +39,6 @@ Rich comments to VBBL are added in VBBL_lib_algorithmic_compiling_optimization/
 #### typical time used for VBMicrolensing
 |                                    | x_range/y_range= np.linspace(-1.0,1.0,251) | x_range/y_range= np.linspace(-0.1,0.1,251) | x_range/y_range= np.linspace(-0.01,0.01,251) |
 |------------------------------------|--------------------------------------------|--------------------------------------------|----------------------------------------------|
-| Algorithmic Compiling Optimization | 0.199 s                                    | 4.837 s                                    | 12.654 s                                     |
+| Algorithmic Compiling Optimization | 13.591 s                                   | 22.230 s                                   | 94.480 s                                     |
 | Compiling Optimization             | 0.202 s                                    | 5.171 s                                    | 18.400 s                                     |
 | No Optimization                    | 0.801 s                                    | 12.154 s                                   | 34.111 s                                     |
