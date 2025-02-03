@@ -27,5 +27,5 @@ Rich comments to VBBL are added in VBBL_lib_algorithmic_compiling_optimization/
 15. repeat step 9-11 with other two versions, then you can compare the performance between No Optimization, Compiling Optimization, and Algorithmic Compiling Optimization.
 ### VBMicrolensing
 17. ./test_VBMicrolensingAlgorithmicCompilingOptimization.out -1.0 -1.0 1
-    <br>(which means x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', <br>default s=1.0, q=0.001, rho=0.001, Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using MultiMag with Multipoly method)
+    <br>(which means x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', <br>default s2=1.0, q2=0.001, s3=0.9, q3=0.0001, psi=90 degree, rho=0.001, Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using MultiMag with Multipoly method)
 18. run remaining two ranges and again other two versions like in VBBL, and compare results   
