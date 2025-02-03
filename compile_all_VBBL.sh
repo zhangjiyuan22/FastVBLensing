@@ -30,6 +30,8 @@ g++ -O3 -g -Wall -Wextra -march=native test_VBBLNoOptimization.cpp -Lbin -l_VBBi
 
 
 
+
+
 ###########################################
 ### Compiling Optimization version VBBL ###
 ###########################################
@@ -44,10 +46,6 @@ chmod -x bin/lib_VBBinaryLensingLibraryCompilingOptimization.so
 rm -rf bin/test_VBBLCompilingOptimization.out
 #the source file should be in front of the dynamic library
 g++ -O3 -g -Wall -Wextra -march=native test_VBBLCompilingOptimization.cpp -Lbin -l_VBBinaryLensingLibraryCompilingOptimization -o bin/test_VBBLCompilingOptimization.out
-
-
-
-
 
 
 
