@@ -1,9 +1,9 @@
 #Check for the existence of the dynamic library path environment variable(LD_LIBRARY_PATH)
-echo $LD_LIBRARY_PATH
+#echo $LD_LIBRARY_PATH
 #If there is nothing to be displayed, add a default path value (or not if you wish to)
-LD_LIBRARY_PATH=/usr/local/lib
+#LD_LIBRARY_PATH=/usr/local/lib
 #add the desired path (need to change the following path according to the location of this folder in your system)
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/work/zhangjiyuan/VBMicrolensing_and_VBBL/bin/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:bin/
 
 
 
