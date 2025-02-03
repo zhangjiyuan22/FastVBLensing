@@ -14,14 +14,17 @@ Rich comments to VBBL are added in VBBL_lib_algorithmic_compiling_optimization/
 6. ./compile_all_VBMicrolensing.sh
 7. export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:bin/
 8. cd bin
-9. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -1.0 -1.0 1
-    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)
-10. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -0.1 -0.1 2
-    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.1, 0.1, 251), resulting file named as '2', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)
-11. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -0.01 -0.01 3
-    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.01, 0.01, 251), resulting file named as '3', default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)
+### VBBL
+10. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -1.0 -1.0 1
+    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', <br>default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)
+11. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -0.1 -0.1 2
+    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.1, 0.1, 251), resulting file named as '2', <br>default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)
+12. ./test_VBBLAlgorithmicCompilingOptimization.out 1.0 0.001 0.001 -0.01 -0.01 3
+    <br>(which means s=1.0, q=0.001, rho=0.001, x_range/y_range=np.linspace(-0.01, 0.01, 251), resulting file named as '3', <br>default Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using BinaryMag2)
     <br>(Purpose of running three times with different ranges: get enough points in low/medium/high magnification region, respectively)
-12. cd ../result
-13. ls <br>(now there are three files generated. in each file, first column is magnification, second column is computation time in second.)
-14. repeat step 9-11 with other versions, then you can compare the performance between No Optimization, Compiling Optimization, and Algorithmic Compiling Optimization. 
+13. cd ../result
+14. ls <br>(now there are three files generated. in each file, first column is magnification, second column is computation time in second.)
+15. repeat step 9-11 with other two versions, then you can compare the performance between No Optimization, Compiling Optimization, and Algorithmic Compiling Optimization.
+### VBMicrolensing
+17. 
    
