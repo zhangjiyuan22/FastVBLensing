@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
     // write arrays into a file
     FILE *file_pointer ;
 
-    char file_name[] = "../result/test_VBMicrolensing_result_compiling_optimization_3_with_RelTol_1eminus4.txt" ;
+    char file_name[] = "../result/test_VBBL_result_compiling_optimization_3_with_RelTol_1eminus4.txt" ;
     file_name[50] = file_number ;
 
     file_pointer = fopen(file_name,"w") ; 
