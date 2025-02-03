@@ -25,12 +25,19 @@ Rich comments to VBBL are added in VBBL_lib_algorithmic_compiling_optimization/
 13. cd ../result
 14. ls <br>(now there are three files generated. in each file, first column is magnification, second column is computation time in second.)
 15. repeat step 9-11 with other two versions, then you can compare the performance between No Optimization, Compiling Optimization, and Algorithmic Compiling Optimization.
-|                                    | x_range/y_range= np.linspace(-1.0,1.0,251) | x_range/y_range= np.linspace(-0.1,0.1,251) | x_range/y_range= np.linspace(-0.01,0.01,251) |   |
-|------------------------------------|--------------------------------------------|--------------------------------------------|----------------------------------------------|---|
-| Algorithmic Compiling Optimization | 0.199 s                                    | 4.837 s                                    | 12.654 s                                     |   |
-| Compiling Optimization             | 0.202 s                                    | 5.171 s                                    | 18.400 s                                     |   |
-| No Optimization                    | 0.801 s                                    | 12.154 s                                   | 34.111 s                                     |   |
+#### typical time used for VBBL
+|                                    | x_range/y_range= np.linspace(-1.0,1.0,251) | x_range/y_range= np.linspace(-0.1,0.1,251) | x_range/y_range= np.linspace(-0.01,0.01,251) |
+|------------------------------------|--------------------------------------------|--------------------------------------------|----------------------------------------------|
+| Algorithmic Compiling Optimization | 0.199 s                                    | 4.837 s                                    | 12.654 s                                     |
+| Compiling Optimization             | 0.202 s                                    | 5.171 s                                    | 18.400 s                                     |
+| No Optimization                    | 0.801 s                                    | 12.154 s                                   | 34.111 s                                     |
 ### VBMicrolensing
 17. ./test_VBMicrolensingAlgorithmicCompilingOptimization.out -1.0 -1.0 1
     <br>(which means x_range/y_range=np.linspace(-1.0, 1.0, 251), resulting file named as '1', <br>default s2=1.0, q2=0.001, s3=0.9, q3=0.0001, psi=90 degree, rho=0.001, Tol=1e-3, RelTol=1e-4, No Limb-Darkening, using MultiMag with Multipoly method)
 18. run remaining two ranges and again other two versions like in VBBL, and compare results   
+#### typical time used for VBMicrolensing
+|                                    | x_range/y_range= np.linspace(-1.0,1.0,251) | x_range/y_range= np.linspace(-0.1,0.1,251) | x_range/y_range= np.linspace(-0.01,0.01,251) |
+|------------------------------------|--------------------------------------------|--------------------------------------------|----------------------------------------------|
+| Algorithmic Compiling Optimization | 0.199 s                                    | 4.837 s                                    | 12.654 s                                     |
+| Compiling Optimization             | 0.202 s                                    | 5.171 s                                    | 18.400 s                                     |
+| No Optimization                    | 0.801 s                                    | 12.154 s                                   | 34.111 s                                     |
