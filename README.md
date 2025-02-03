@@ -23,5 +23,5 @@ Rich comments to VBBL are added in VBBL_lib_algorithmic_compiling_optimization/
     <br>(Purpose of running three times with different ranges: get enough points in low/medium/high magnification region, respectively)
 12. cd ../result
 13. ls <br>(now there are three files generated. in each file, first column is magnification, second column is computation time in second.)
-14. repeat step 9-10 with other versions, then you can compare the performance between No Optimization, Compiling Optimization, and Algorithmic Compiling Optimization. 
+14. repeat step 9-11 with other versions, then you can compare the performance between No Optimization, Compiling Optimization, and Algorithmic Compiling Optimization. 
    
