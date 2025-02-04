@@ -6934,11 +6934,13 @@ void VBBinaryLensing::BinaryMag2_Npoint(double *s, double q,  double rho, \
 extern "C"
 {
 
-void * wrapBinaryMag2(double s, double q, double x, double y, double rho, double Gamma, double EPSILON, double *Mag)
+void * wrapBinaryMag2(double s, double q, double x, double y, double rho, \
+						double Gamma, double absolute_tolerance, double relative_tolerance, double *Mag)
 {
 		VBBinaryLensing VBBL;
 		VBBL.a1 = Gamma;
-		VBBL.Tol = EPSILON;
+		VBBL.Tol 	= absolute_tolerance ;
+		VBBL.RelTol = relative_tolerance ;
 
 		//std::ofstream outFile2("test_VBBL.dat");
 		//outFile2<<Gamma<<" ";
@@ -6952,17 +6954,17 @@ void * wrapBinaryMag2(double s, double q, double x, double y, double rho, double
 
 void * wrapBinaryMag2_Npoint(double *s, double q, double rho, \
 							 double *x, double *y, \
-							 double Gamma, double EPSILON, \
+							 double Gamma, double absolute_tolerance, double relative_tolerance, \
 							 int np, \
 							 double *mags)
 {
 		VBBinaryLensing VBBL;
-		VBBL.a1 = Gamma;
-		VBBL.Tol = EPSILON;
+		VBBL.a1 	= Gamma;
+		VBBL.Tol 	= absolute_tolerance ;
+		VBBL.RelTol = relative_tolerance ;
 
         VBBL.BinaryMag2_Npoint(s, q, rho, x, y, np, mags); 
 
 		return 0;
 }
-
 }
