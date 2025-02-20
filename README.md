@@ -27,6 +27,7 @@ Rich comments to VBBL are added in VBBL_lib_algorithmic_compiling_optimization/
 13. cd ../result
 14. ls <br>(now there are three files generated. in each file, first column is magnification, second column is computation time in second.)
 15. repeat step 9-11 with other two versions, then you can compare the performance between No Optimization, Compiling Optimization, and Algorithmic Compiling Optimization.
+16. you can compare the correctness of results between different versions using e.g. diff <(awk '{print $1}' test_VBBL_result_algorithmic_compiling_optimization_3_with_RelTol_1eminus4.txt) <(awk '{print $1}' test_VBBL_result_compiling_optimization_3_with_RelTol_1eminus4.txt)
 #### typical time used for VBBL
 |                                    | x_range/y_range= np.linspace(-1.0,1.0,251) | x_range/y_range= np.linspace(-0.1,0.1,251) | x_range/y_range= np.linspace(-0.01,0.01,251) |
 |------------------------------------|--------------------------------------------|--------------------------------------------|----------------------------------------------|
