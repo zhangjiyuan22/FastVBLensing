@@ -1939,15 +1939,31 @@ _curve* VBMicrolensing::NewImages(complex yi, complex * coefs, _theta * theta) {
 	y = yi + coefs[11];
 	yc = conj(y);
 
-	// coefs[6]=a*a; coefs[7]=a*a*a; coefs[8]=m2*m2; coefs[9]=a*a*m2*m2; coefs[10]=a*m2; coefs[11]=a*m1; coefs[20]=a; coefs[21]=m1; coefs[22]=m2;
+	// new coefficients
+	coefs[12] = coefs[20] - yc;	// a-yc
+	coefs[13] = coefs[20] + y;	// a+y
+	coefs[14] = coefs[13] + y;	// a+2y
+	coefs[15] = conj(coefs[14]);// a+2yc
+	coefs[16] = coefs[20] * y;	// a*y
+	coefs[17] = conj(coefs[16]);// a*yc
+	coefs[18] = conj(coefs[12]);// a-y
 
 	coefs[0] = coefs[9] * y;
-	coefs[1] = coefs[10] * (coefs[20] * (coefs[21] + y * (2 * yc - coefs[20])) - 2 * y);
-	coefs[2] = y * (1 - coefs[7] * yc) - coefs[20] * (coefs[21] + 2 * y * yc * (1 + coefs[22])) + coefs[6] * (yc * (coefs[21] - coefs[22]) + y * (1 + coefs[22] + yc * yc));
-	coefs[3] = 2 * y * yc + coefs[7] * yc + coefs[6] * (yc * (2 * y - yc) - coefs[21]) - coefs[20] * (y + 2 * yc * (yc * y - coefs[22]));
-	coefs[4] = yc * (2 * coefs[20] + y);
-	coefs[4] = yc * (coefs[4] - 1) - coefs[20] * (coefs[4] - coefs[21]);
-	coefs[5] = yc * (coefs[20] - yc);
+	coefs[1] = -coefs[9] + coefs[10] * (coefs[20] + (2 * coefs[17] - 2 - coefs[6]) * y);	// -a*a*m2*m2 + a*m2 * [a+(2*a*yc-2-a*a)*y]
+	coefs[2] = coefs[10] * (1 + coefs[16] - 2 * yc * coefs[13]) - (coefs[17] - 1) * (coefs[16] * coefs[12] - coefs[18]);
+	coefs[3] = coefs[10] * coefs[15] + (coefs[7] + 2 * (1 + coefs[6]) * y - coefs[17] * coefs[14]) * yc - coefs[20] * coefs[13];
+	coefs[4] = -coefs[10] - coefs[12] * (yc * (coefs[13] + coefs[20]) - 1);	// -a*m2 - (a-yc)*[yc*(a+y+a) - 1]
+	coefs[5] = yc * coefs[12];
+	
+	// // coefs[6]=a*a; coefs[7]=a*a*a; coefs[8]=m2*m2; coefs[9]=a*a*m2*m2; coefs[10]=a*m2; coefs[11]=a*m1; coefs[20]=a; coefs[21]=m1; coefs[22]=m2;
+
+	// coefs[0] = coefs[9] * y;
+	// coefs[1] = coefs[10] * (coefs[20] * (coefs[21] + y * (2 * yc - coefs[20])) - 2 * y);
+	// coefs[2] = y * (1 - coefs[7] * yc) - coefs[20] * (coefs[21] + 2 * y * yc * (1 + coefs[22])) + coefs[6] * (yc * (coefs[21] - coefs[22]) + y * (1 + coefs[22] + yc * yc));
+	// coefs[3] = 2 * y * yc + coefs[7] * yc + coefs[6] * (yc * (2 * y - yc) - coefs[21]) - coefs[20] * (y + 2 * yc * (yc * y - coefs[22]));
+	// coefs[4] = yc * (2 * coefs[20] + y);
+	// coefs[4] = yc * (coefs[4] - 1) - coefs[20] * (coefs[4] - coefs[21]);
+	// coefs[5] = yc * (coefs[20] - yc);
 
 	bad = 1;
 	disim = -1.;
